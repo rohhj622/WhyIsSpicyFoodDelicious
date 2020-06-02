@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spicy.food.opinionMapper">
+<!-- resultType="com.spicy.food.domain." -->
+	<select id="selectOpinion" resultType="com.spicy.food.domain.OpinionVO">
+		select * from wsfd.opinion order by op_like desc
+	</select>
+	
+	<insert id="insertOpinion">
+	 	insert into wsfd.opinion(tp_num,op_opinion,op_like,op_date) 
+	 	values(#{tp_num},#{op_opinion},#{op_like},now()) 
+	</insert>
+
+	<update id="updateLike">
+		update wsfd.opinion set op_like=op_like+1 where op_num=#{op_num}
+	</update>
+</mapper>
