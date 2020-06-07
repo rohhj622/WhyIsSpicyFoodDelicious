@@ -4,7 +4,7 @@
 
 <mapper namespace="com.spicy.food.foodMapper">
 <!-- resultType="com.spicy.food.domain." -->
-	<select id="selectOneFood" resultType="com.spicy.food.domain.OpinionVO">
+	<select id="selectOneFood" resultType="com.spicy.food.domain.FoodVO">
 		select fd_name from wsfd.food where fd_num=#{fd_num}
 	</select>
 </mapper>

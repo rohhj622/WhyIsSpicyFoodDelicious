@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-
+import com.spicy.food.domain.FoodVO;
 import com.spicy.food.service.FoodService;
 
 /**
@@ -25,34 +25,26 @@ public class AjaxTestController {
 	@Inject
 	FoodService service;
 	
-//	@RequestMapping(value = "/wantFood",method = RequestMethod.GET)
-//	public String wantFoodGET( ) throws Exception {
-//		logger.info("get?");
-//		return "ajax_test";
-//	}
-//	
-//	@ResponseBody
-//	@RequestMapping(value = "/wantFoodajax", method = RequestMethod.POST)
-//	public String wantFoodPOST(@RequestParam("fd_num") int fd_num, FoodVO vo) throws Exception {
-//		
-//		logger.info("post");
-//		vo = service.selectOneFood(fd_num);
-//		
-//		return vo.getFd_name();
-//	}
-	
-	@RequestMapping(value = "/test",method = RequestMethod.GET)
+	@RequestMapping(value = "/whatFood",method = RequestMethod.GET)
 	public String testGET( ) throws Exception {
 		logger.info("-----get-----");
-		return "ajax_test2";
+		return "what_food";
 	}
 	
-	@ResponseBody
-	@RequestMapping(value = "/test",method = RequestMethod.POST)
-	public String testPOST(String hi) throws Exception {
+	@ResponseBody												// 한글을 return 하기 위해서 produces 해서 설정  
+	@RequestMapping(value = "/whatFood",method = RequestMethod.POST, produces = "application/text; charset=utf8")
+	public String testPOST(@RequestParam(value="fd_num") int fd_num) throws Exception {
+							//json 형식으로 받은 데이터
 		logger.info("-----post-----");
+		logger.info(Integer.toString(fd_num));
 		
-		return hi;
+		FoodVO vo = new FoodVO();
+		vo = service.selectOneFood(fd_num); // 음식 이름 가져오기 
+		String choiceFood = vo.getFd_name(); 
+		
+		logger.info(choiceFood);
+		
+		return choiceFood;
 	}
 	
 	

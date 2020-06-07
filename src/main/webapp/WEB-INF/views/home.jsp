@@ -26,18 +26,35 @@
 	<div class="container" style="text-align:center;">
 		<div class="jumbotron" >
 			<h1>
-				공부하자
+				공부하고 싶은 것.
 			</h1>
 			<h5>201844077</h5>
 		</div>
 		<div class="row">
-			<h3 style="text-align:center;">
-				<a href="/food/spicyfood">매운거 조아홰?</a>
-			</h3>
-			<h3>
-				
-			</h3>
+			<table class="table" style="text-align:center;">
+				<tr>
+					<td>
+						<h3 style="text-align:left;">Get & Post</h3>
+					</td>
+					<td>
+						<h3 style="text-align:center;">
+							<a href="/food/spicyfood">매운거 조아홰?</a>
+						</h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3 style="text-align:left;">ajax</h3>
+					</td>
+					<td>
+						<h3 style="text-align:center;">
+							<a href="/food/whatFood">아.. 뭐 먹고싶은데...근데 찜닭은 싫어... </a>
+						</h3>
+					</td>
+				</tr>
+			</table>
 		</div>
+		
 	</div>
 	
 	
