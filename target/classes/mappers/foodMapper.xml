@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spicy.food.foodMapper">
+<!-- resultType="com.spicy.food.domain." -->
+	<select id="selectOneFood" resultType="com.spicy.food.domain.OpinionVO">
+		select fd_name from wsfd.food where fd_num=#{fd_num}
+	</select>
+</mapper>

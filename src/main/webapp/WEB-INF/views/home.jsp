@@ -8,37 +8,35 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+    <!-- jQuery -->
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">	
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">	
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script> 
+	
+	<style type="text/css">
+	
+	</style>
 	 
 </head>
 <body>
-	<div class="container">
-		<div class="jumbotron">
-			<h1 style="text-align:center;">
-				매운 음식을 왜 선호할까?  
+	<div class="container" style="text-align:center;">
+		<div class="jumbotron" >
+			<h1>
+				공부하자
 			</h1>
+			<h5>201844077</h5>
 		</div>
 		<div class="row">
-			<form method="POST">
-				<table class="table">
-					<tr>
-						<td>
-							<input class="form-control" type="text" name="cause" />
-						</td>
-						<td style="text-align:center;">
-							<input class="btn" type="submit" name="의견내기" style="width:100%;"/>
-						</td>
-					</tr>
-					
-					
-				</table>
-			</form>
+			<h3 style="text-align:center;">
+				<a href="/food/spicyfood">매운거 조아홰?</a>
+			</h3>
+			<h3>
+				
+			</h3>
 		</div>
 	</div>
 	

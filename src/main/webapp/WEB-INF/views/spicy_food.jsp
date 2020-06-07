@@ -8,7 +8,8 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+    <!-- jQuery -->
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">	
 	<!-- Optional theme -->
@@ -32,11 +33,14 @@
 				}
 	</script>
 	
-	<div class="container">
+	<div class="container" style="text-align:center;">
 		<div class="jumbotron">
 			<h1 style="text-align:center;">
 				매운 음식을 왜 선호할까?  
 			</h1>
+			<h5>
+				<a href="<c:url value='/'/>">돌아갈래</a>
+			</h5>
 		</div>
 		<div class="row">
 			<form method="POST" name="fr" onsubmit="return check()">
